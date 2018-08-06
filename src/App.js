@@ -25,7 +25,7 @@ class App extends Component {
     });
     const channel = pusher.subscribe('chat');
     channel.bind('message', data => {
-      this.setState({ chats: [...this.state.chats, data], test: '' });
+      this.setState({ chats: [...this.state.chats, data], text: '' });
     });
     this.handleTextChange = this.handleTextChange.bind(this);
   }
